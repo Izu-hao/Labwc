@@ -1,2 +1,2 @@
 #!/bin/sh
-swaybg -c '#9d9988' &
+swaybg -i /home/izu/Pictures/wpp.jpg -m fill &
