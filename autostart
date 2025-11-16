@@ -1,2 +1,4 @@
 #!/bin/sh
 swaybg -i /home/izu/Pictures/wpp.jpg -m fill &
+
+wlr-randr --output DP-3 --mode 1920x1080@180.001007
