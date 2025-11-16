@@ -48,7 +48,16 @@
     <keybind key="W-f">
       <action name="ToggleFullscreen"/>
     </keybind>
-
+	
+    <keybind key="W-S-1">
+  <action name="SendToDesktop" to="1" follow="no"/>
+   </keybind>
+  <keybind key="W-S-2">
+   <action name="SendToDesktop" to="2" follow="no"/>
+  </keybind>
+  <keybind key="W-S-3">
+   <action name="SendToDesktop" to="3" follow="no"/>
+  </keybind>
 
     <keybind key="W-1">
       <action name="GoToDesktop" to="1"/>
