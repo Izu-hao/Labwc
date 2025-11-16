@@ -1,0 +1,2 @@
+#!/bin/sh
+swaybg -c '#9d9988' &

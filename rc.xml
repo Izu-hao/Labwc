@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<labwc_config>
+
+  <!-- Quitar todas las decoraciones de ventanas -->
+  <theme>
+    <name>Clearlooks</name>
+    <cornerRadius>0</cornerRadius>
+    <keepBorder>no</keepBorder>
+  </theme>
+
+  <!-- Reglas para quitar decoraciones -->
+  <windowRules>
+    <windowRule identifier="*">
+      <action name="ToggleDecorations"/>
+    </windowRule>
+  </windowRules>
+
+
+ <desktops>
+    <number>3</number>
+    <popupTime>0</popupTime>
+  </desktops>
+
+  <!-- Tema mínimo -->
+  <theme>
+    <cornerRadius>0</cornerRadius>
+  </theme>
+
+  <!-- Focus al hacer click -->
+  <focus>
+    <followMouse>no</followMouse>
+    <raiseOnFocus>yes</raiseOnFocus>
+  </focus>
+
+  <!-- Keybinds -->
+  <keyboard>
+    <!-- Terminal -->
+    <keybind key="W-Return">
+      <action name="Execute" command="foot"/>
+    </keybind>
+    
+    <!-- Launcher -->
+    <keybind key="W-d">
+      <action name="Execute" command="fuzzel"/>
+    </keybind>
+
+   <!-- Fullscreen -->
+    <keybind key="W-f">
+      <action name="ToggleFullscreen"/>
+    </keybind>
+
+
+    <keybind key="W-1">
+      <action name="GoToDesktop" to="1"/>
+    </keybind>
+    <keybind key="W-2">
+      <action name="GoToDesktop" to="2"/>
+    </keybind>
+    <keybind key="W-3">
+      <action name="GoToDesktop" to="3"/>
+    </keybind>
+    
+    <!-- Volumen arriba -->
+    <keybind key="W-s">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"/>
+    </keybind>
+    
+    <!-- Volumen abajo -->
+    <keybind key="W-a">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"/>
+    </keybind>
+    
+    <!-- Cerrar ventana -->
+    <keybind key="W-q">
+      <action name="Close"/>
+    </keybind>
+    
+    <!-- Modo resize interactivo -->
+    <keybind key="W-r">
+      <action name="Resize"/>
+    </keybind>
+    
+    <!-- Salir -->
+    <keybind key="W-S-e">
+      <action name="Exit"/>
+    </keybind>
+  </keyboard>
+
+  <!-- Mouse -->
+  <mouse>
+    <context name="Frame">
+      <mousebind button="W-Left" action="Drag">
+        <action name="Move"/>
+      </mousebind>
+      <mousebind button="W-Right" action="Drag">
+        <action name="Resize"/>
+      </mousebind>
+    </context>
+    
+    <!-- Click normal en ventana para dar focus -->
+    <context name="Client">
+      <mousebind button="Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
+    </context>
+  </mouse>
+
+</labwc_config>
